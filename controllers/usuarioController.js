@@ -5,5 +5,10 @@ module.exports = {
   store: (req, res) => {
 
     console.log(req.body);
+
+    res.redirect('/sucesso')
+  },
+  sucesso: (req, res) => {
+    res.render('sucesso');
   }
 }
