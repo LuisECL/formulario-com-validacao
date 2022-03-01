@@ -11,13 +11,14 @@
 <body>
   <header>
     <div>Logotipo Genérico</div>
-    <div>Info do usuário</div>
+    <div><strong><%= usuario.nome %></strong></div>
   </header>
   <main class="entrada">
     <h1>Area 51</h1>
     <h4>(Entrada)</h4>
     <img src="/img/entrada.jpg" alt="Entrada à área 51">
     <br>
+    <p>Bem-vindo <strong><%= usuario.nome %></strong> || id: <strong><%= usuario.id %></strong> || e-mail: <strong><%= usuario.email %></strong></p>
     <p>Tem certeza que quer continuar...?</p>
     <button class="paraAliens"><a href="aliens">Tenho!</a></button>
   </main>
