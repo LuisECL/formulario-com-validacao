@@ -6,7 +6,7 @@ module.exports = {
   },
 
   login: (req, res) => {
-    res.render('login')
+    res.render('login', {erro:""})
   },
 
   validaLogin: (req, res) => {
@@ -15,7 +15,7 @@ module.exports = {
     const usuario = usuarios.find( u => u.email == email && u.senha == senha);
 
     if (usuario === undefined) {
-      return res.send('Senha ou e-mail não cadastrado')
+      return res.render('login', {erro:"erro"})
     }
 
     return res.send('Logado com sucesso!')

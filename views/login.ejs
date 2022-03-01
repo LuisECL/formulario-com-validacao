@@ -29,6 +29,9 @@
         <label for="senha">Senha:</label>
         <input type="password" name="senha" id="senha">
         <br>
+        <% if(erro) { %>
+          <p class="feedback">Email ou senha inválido!</p>
+        <% } %>
         <button>Entrar</button>
       </form>
 
