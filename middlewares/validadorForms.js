@@ -13,8 +13,7 @@ const validador = [
   .notEmpty().withMessage('Precisa de uma senha!'),
 
   check('senha02')
-  .notEmpty().withMessage('Aqui também...')
-
+  .notEmpty().withMessage('Aqui também...'),
 ]
 
 module.exports = validador;

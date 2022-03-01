@@ -6,7 +6,9 @@ module.exports = {
   },
 
   store: (req, res) => {
+    let {senha01, senha02} = req.body;
     let errors = validationResult(req);
+
     if (errors.isEmpty()) {
 
       console.log(req.body);
