@@ -3,5 +3,10 @@
     "id":"1",
     "email":"secreto@mail.com",
     "senha":"123456"
+  },
+  {
+    "id":"2",
+    "email":"outrosecreto@mail.com",
+    "senha":"456789"
   }
 ]
