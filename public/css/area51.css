@@ -1,0 +1,22 @@
+.entrada {
+  width: 50%;
+  margin: auto;
+}
+
+.entrada > img {
+  margin-top: 10px;
+}
+
+.entrada > p {
+  margin: 10px auto;
+}
+
+.paraAliens {
+  margin: 10px auto;
+  width: 10%
+}
+
+.paraHome {
+  margin: 10px auto;
+  width: 25%;
+}

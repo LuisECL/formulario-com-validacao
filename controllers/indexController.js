@@ -2,7 +2,7 @@ const usuarios = require('../database/Usuarios.json');
 
 module.exports = {
   home: (req, res) => {
-    res.render('home', {sucesso:""});
+    res.render('home');
   },
 
   login: (req, res) => {
