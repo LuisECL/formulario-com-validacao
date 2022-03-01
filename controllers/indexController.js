@@ -18,6 +18,7 @@ module.exports = {
       return res.render('login', {erro:"erro"})
     }
 
+    req.session.usuario = usuario
     return res.redirect('/');
 
   }
