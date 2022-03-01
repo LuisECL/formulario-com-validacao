@@ -1,0 +1,11 @@
+main {
+  width: 720px;
+  margin: auto;
+  padding: 10px;
+}
+
+.login {
+  width: 540px;
+  margin: auto;
+  height: 200px;
+}
