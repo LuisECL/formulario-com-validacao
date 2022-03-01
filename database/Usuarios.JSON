@@ -1,11 +1,13 @@
 [
   {
     "id":"1",
+    "nome":"Agente secreto 001",
     "email":"secreto@mail.com",
     "senha":"123456"
   },
   {
     "id":"2",
+    "nome":"Agente secreto 002",
     "email":"outrosecreto@mail.com",
     "senha":"456789"
   }

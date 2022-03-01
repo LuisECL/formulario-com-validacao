@@ -1,8 +1,9 @@
 function auth(req, res, next) {
   if(typeof(req.session.usuario) != "undefined") {
+    console.log(req.session.usuario);
     return next();
   } else {
-    return res.send('Você precisa estar logado');
+    return res.redirect('../login');
   }
 }
 
