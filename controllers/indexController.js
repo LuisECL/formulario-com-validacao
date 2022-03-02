@@ -1,4 +1,5 @@
-const usuarios = require('../database/Usuarios.json');
+//const usuarios = require('../database/Usuarios.json');
+const fs = require('fs')
 
 module.exports = {
   home: (req, res) => {
@@ -12,14 +13,23 @@ module.exports = {
   validaLogin: (req, res) => {
     let {email, senha} = req.body
 
-    const usuario = usuarios.find( u => u.email == email && u.senha == senha);
+    fs.readFile('./database/Usuarios.json', 'utf-8', (err, jsonString) => {
+      if (err) {
+        console.log('Não foi possível acessar o banco de dados')
+      } else {
+        console.log('Acesso ao banco de dados!!')
+        let usuarios = JSON.parse(jsonString);
 
-    if (usuario === undefined) {
-      return res.render('login', {erro:"erro"})
-    }
+        const usuario = usuarios.find(u => u.email == email && u.senha01 == senha);
 
-    req.session.usuario = usuario
-    return res.redirect('/');
+        if (usuario === undefined) {
+          return res.render('login', {erro:"erro"})
+        }
+
+        req.session.usuario = usuario
+        return res.redirect('/');
+      }
+    })
 
   }
 }
