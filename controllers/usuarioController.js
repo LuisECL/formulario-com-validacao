@@ -12,18 +12,30 @@ module.exports = {
 
     if (errors.isEmpty()) {
 
-      // Lógica para definir o novo id
-      /*let db = fs.readFile('../formulario-com-validacao/database/Usuarios.JSON', 'utf-8', error => {
-        if (error) {
-          console.log(error.message)
-        } else {
-          console.log(db)
-        }
-      })
+      let novoUsuario = req.body
 
-      // Lógica para salvar o novo usuário no JSON // console.log(req.body);
-      let {nome, email, senha01} = req.body;
-      let usuarioNovo = {}*/
+      fs.readFile("./database/Usuarios.JSON", "utf-8", (error, jsonString) => {
+        if (error) {
+          console.log(error.message);
+        } else {
+          const data = JSON.parse(jsonString);
+          let novoId = data.length + 1;
+
+          novoUsuario.id = novoId.toString();
+          data.push(novoUsuario);
+
+          let dataToJson = JSON.stringify(data, null, 2);
+
+          fs.writeFile("./database/Usuarios.JSON", dataToJson, (error) => {
+            if (error) {
+              console.log("Erro tentando adicionar o novo usuário");
+              console.log(error.message);
+            } else {
+              console.log("Novo usuário adicionado!");
+            }
+          });
+        }
+      });
 
       res.redirect('sucesso');
 
