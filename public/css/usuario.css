@@ -16,6 +16,7 @@ header {
   margin-bottom: 15px;
   background-color: rgb(46, 46, 46);
   color: rgb(216, 216, 216);
+  align-items: center;
 }
 
 header > div:first-child {

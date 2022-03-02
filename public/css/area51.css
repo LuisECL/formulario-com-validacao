@@ -1,3 +1,7 @@
+header > button {
+  margin: 0 10px;
+}
+
 .entrada {
   width: 50%;
   margin: auto;

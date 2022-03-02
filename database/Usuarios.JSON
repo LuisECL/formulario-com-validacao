@@ -4,5 +4,12 @@
     "nome": "Agente secreto 001",
     "email": "secreto@mail.com",
     "senha": "123456"
+  },
+  {
+    "nome": "Luis",
+    "email": "luis@mail.com",
+    "senha01": "123456",
+    "senha02": "123456",
+    "id": "2"
   }
 ]
