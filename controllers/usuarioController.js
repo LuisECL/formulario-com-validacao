@@ -10,6 +10,17 @@ module.exports = {
     // let {senha01, senha02} = req.body;
     let errors = validationResult(req);
 
+
+    // Validar confirmação de senha
+    if (req.body.senha01 != req.body.senha02) {
+      errors.errors.push({
+        value: req.body.senha02,
+        msg: 'As senhas precisam ser iguais',
+        param: 'senha02',
+        location: 'body'
+      })
+    }
+
     if (errors.isEmpty()) {
 
       let novoUsuario = req.body

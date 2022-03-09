@@ -13,7 +13,15 @@ const validador = [
   .notEmpty().withMessage('Precisa de uma senha!'),
 
   check('senha02')
-  .notEmpty().withMessage('Aqui também...'),
+  .notEmpty().withMessage('Aqui também...')
+  // .custom((senha02, req) => {
+  //   const confirmaSenha = req.body.senha01;
+  //   console.log(req.body)
+
+  //   if(confirmaSenha != senha02) {
+  //     throw new Error("As senhas precisam ser iguais")
+  //   }
+  // })
 ]
 
 module.exports = validador;

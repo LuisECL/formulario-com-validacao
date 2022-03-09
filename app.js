@@ -18,6 +18,14 @@ app.use(express.json())
 //Session como middleware global(?)
 app.use(session({secret:"SEGREDO"}));
 
+// Middleware global adicionando propriedade usuarios ao locals sempre que usuario estiver logado
+app.use((req, res, next) => {
+  if(req.session.usuario) {
+    res.locals.usuario = req.session.usuario;
+  }
+  next();
+})
+
 // Definição de rotas
 app.use('/', rotasIndex);
 app.use('/usuario', rotasUsuario);

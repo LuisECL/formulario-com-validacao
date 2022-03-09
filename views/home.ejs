@@ -15,6 +15,9 @@
   <main>
     <section class="home">
       <h1>Nome do site!</h1>
+      <% if(locals.usuario) { %>
+        <h2>Usuario <%= usuario.nome %> logado!</h2>
+      <% } %>
       <br>
       <div>
         <section>
